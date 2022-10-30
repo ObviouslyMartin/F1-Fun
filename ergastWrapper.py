@@ -79,3 +79,11 @@ class ergast:
             return result, res
         except IndexError:
             return ""
+
+    def getDriverPoints(pos, season="current"):
+        try:
+            res = req.get(f'{self.baseURL}/{season}/driverStandings.json').json()
+            result = res["MRData"]["StandingsTable"]["StandingsLists"]
+            return result, res
+        except IndexError:
+            return ""

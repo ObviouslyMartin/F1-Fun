@@ -12,7 +12,7 @@ def test_getRaceResults():
 
 def test_getDriverStandings():
     res = api.getDriverStandings()
-    print(res)
+    print(res[1])
 
 def test_f1parser():
     f1parser.createDrivers(api.getRaceResults(2022, 11))
@@ -26,5 +26,7 @@ def test_getSeasonLength():
     res = api.getSeasonLength()
     print(res)
 
+
+
 if __name__ == '__main__':
-    test_getSeasonLength()
+    test_getDriverStandings()
