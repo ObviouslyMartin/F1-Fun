@@ -79,7 +79,9 @@ class Earliest_Win:
             '''
             TODO: print finish position 1st and 2nd place need to win/take the championship
             find at what point the amount of points remaining < the points delta
+            example:
             '''
+
 def earliest_win():
     '''
     return the race where second place can no longer win enough points to beat first place (remaining points < delta between 1st and 2nd). 
