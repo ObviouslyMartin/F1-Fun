@@ -64,7 +64,7 @@ class ergast:
     def getRaceResults(self, season="current", round="last"):
         try:
             res = req.get(f'{self.baseURL}/{season}/{round}/results.json').json()
-            result = res["MRData"]["RaceTable"]["Races"][0]["Results"]
+            result = res["MRData"]["RaceTable"]
             return result
         except IndexError:
             return "" 

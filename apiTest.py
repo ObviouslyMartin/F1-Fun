@@ -5,7 +5,7 @@ api = ergast()
 f1parser = F1Parser()
 
 def test_getRaceResults():
-    res = api.getRaceResults(2022, 11)
+    res = api.getRaceResults()
     # a.getNamesAndPosFromRes(res)
     print(res)
 
@@ -27,6 +27,5 @@ def test_getSeasonLength():
     print(res)
 
 
-
 if __name__ == '__main__':
-    test_getDriverStandings()
+    test_getRaceResults()
