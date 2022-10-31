@@ -3,6 +3,12 @@ Author: Martin Plut
 Date: 10/28/2022
 Description: Calculate number of remaining points for the season and the earliest possible race to win driver championship
 '''
+
+'''
+TODO:   determine how many sprint races are left (currently assumes all sprint races have been completed
+
+'''
+
 from ergastWrapper import ergast
 
 f1 = ergast()
@@ -62,8 +68,18 @@ class Earliest_Win:
         print(f'championship leader current points total: {self.leader_points}')
         print(f'second place current points total: {self.second_place_points}')
 
-
-
+    def calculate(self):
+        if self.remaining_points < (self.leader_points - self.second_place_points):
+            print(f'mathematically won, remaining points < points delta')
+            print(f'remaining points: {self.remaining_points}')
+            print(f'Champion\'s points: {self.leader_points}')
+            print(f'2nd place\'s points: {self.second_place_points}')
+        else:
+            pass
+            '''
+            TODO: print finish position 1st and 2nd place need to win/take the championship
+            find at what point the amount of points remaining < the points delta
+            '''
 def earliest_win():
     '''
     return the race where second place can no longer win enough points to beat first place (remaining points < delta between 1st and 2nd). 
